@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include "Include/head.html" %}
+
+<body>
+  <h1>Hello World</h1>
+
+  <p>{{ write.first_name }}</p>
+  <ul>
+    {% for writes in write %}
+        <li>
+            <strong>{{ writes.first_name }}</strong>: {{ write.last_name }}
+        </li>
+    {% empty %}
+        <li>No items available.</li>
+    {% endfor %}
+
+      <h2>{{ write.first_name }}</h2>
+    
+</ul>
+
+
+</body>
+</html>
