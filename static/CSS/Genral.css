@@ -1,3 +1,7 @@
 .MainBy {
   padding-bottom: 1000px;
 }
+.MainContainAll {
+  display: flex;
+  flex-direction: column;
+}
