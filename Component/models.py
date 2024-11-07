@@ -14,7 +14,7 @@ class Departement (models.Model):
 class Requrement(models.Model):
   first_name = models.CharField (max_length=20)
   last_name = models.CharField (max_length=30)
-  Dob = models.DateField (auto_now_add=True)
+  Dob = models.DateField (auto_now=False, auto_now_add=False)
   grade = models.IntegerField ()
   departement = models.ForeignKey(Departement, on_delete=models.SET_NULL,null=True)
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Requrement
 from .forms import FormInput
+from django.contrib import messages
 # Create your views here.
 
 def index (request):
@@ -10,7 +11,9 @@ def index (request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
+            messages.success (request, ('Successfully Department Added!'))
             form = FormInput()
+
     write = Requrement.objects.all()
 
     context = {
@@ -18,4 +21,4 @@ def index (request):
         'form' : form
     }
 
-    return render (request, 'index.html' , context=context)
+    return render (request, 'index.html' , context)

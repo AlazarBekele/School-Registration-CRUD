@@ -6,7 +6,7 @@ class FormInput (forms.ModelForm):
     model = Requrement
     fields = '__all__'
 
-    widget = {
+    widgets = {
       'first_name' : forms.TextInput(attrs={
         'class' : 'form-control'
       }),
@@ -16,5 +16,9 @@ class FormInput (forms.ModelForm):
       'Dob' : forms.DateInput(attrs={
         'class' : 'form-control',
         'type' : 'Date'
+      }),
+      'grade' : forms.NumberInput(attrs={
+        'class' : 'form-control',
+        'type' : 'Number'
       })
     }
