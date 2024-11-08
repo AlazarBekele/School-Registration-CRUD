@@ -17,6 +17,7 @@ class Requrement(models.Model):
   Dob = models.DateField (auto_now=False, auto_now_add=False)
   grade = models.IntegerField ()
   departement = models.ForeignKey(Departement, on_delete=models.SET_NULL,null=True)
+  image = models.ImageField (upload_to='photo/', null=True, blank=True)
 
   def __str__(self) -> str:
     return self.first_name + " " + self.last_name
