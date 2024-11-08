@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Requrement
 from .forms import FormInput
 from django.contrib import messages
+
 # Create your views here.
 
 def index (request):
