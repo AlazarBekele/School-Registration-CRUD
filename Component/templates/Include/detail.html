@@ -6,6 +6,12 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Successfully Added!</h1>
+  
+  {% for infos in info %}
+
+    <img src="/media/{{infos.image}}" alt="">
+
+  {% endfor %}
+
 </body>
 </html>

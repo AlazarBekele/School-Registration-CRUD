@@ -20,5 +20,10 @@ class FormInput (forms.ModelForm):
       'grade' : forms.NumberInput(attrs={
         'class' : 'form-control',
         'type' : 'Number'
+      }),
+      'image' : forms.ClearableFileInput(attrs={
+        'class' : 'form-control',
+        'id' :'formFileMultiple',
+        'type' : 'file'
       })
     }
